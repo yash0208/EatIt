@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#232323"
+    android:layout_height="40dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="150dp"
+            android:text="Carbs"
+            android:layout_gravity="left"
+            android:id="@+id/name"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_width="100dp"
+            android:text="13g"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="@color/white"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+
+            android:id="@+id/quantity"
+            android:background="#2C2C2C"
+            android:textSize="18dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="33%"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+
+            android:background="#292929"
+            android:id="@+id/percentage"
+            android:paddingLeft="10dp"
+            android:textSize="18dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</FrameLayout>

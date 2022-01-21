@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0C1015"
+    android:layout_height="match_parent"
+    tools:context=".Search">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="150dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Get Your Cuisine"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff"
+                    android:textSize="30dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/search"
+                    android:background="@drawable/search"
+                    android:padding="10dp"
+                    android:drawablePadding="10dp"
+                    android:textColorHint="#52555B"
+                    android:hint="Search Here"
+                    android:layout_marginRight="80dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_height="50dp"/>
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:id="@+id/search_buttom"
+                    android:background="@drawable/search"
+                    android:src="@drawable/ic_baseline_search_24"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="50dp"/>
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/rec_search"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Special for you"
+                android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/card1"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"
+                app:cardCornerRadius="10dp"
+                android:layout_height="150dp">
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:src="@drawable/image"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="170dp"
+                android:id="@+id/artical"
+                android:layout_marginTop="10dp"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="5 Coffee Beans You \nMust Try !"
+                android:layout_height="wrap_content"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:text="Read More"
+                    android:textColor="#ffffff"
+                    android:fontFamily="@font/nunito_bold"
+                    android:background="@drawable/button"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:id="@+id/open"
+                    android:drawableRight="@drawable/ic_baseline_menu_book_24"
+                    android:drawablePadding="10dp"
+                    android:layout_height="40dp"/>
+            </FrameLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:id="@+id/tab_layout"
+                app:tabMode="fixed"
+                app:tabTextAppearance="@style/tab_text"
+                android:layout_marginTop="10dp"
+                app:tabGravity="center"
+                app:tabIndicatorGravity="stretch"
+                app:tabSelectedTextColor="#D07843"
+                android:layout_gravity="center"
+                app:tabIndicatorHeight="20dp"
+                android:foregroundGravity="center"
+                app:tabTextColor="#52555B"
+                app:tabIndicatorColor="@color/light"
+                app:tabIndicator="@drawable/card"
+                app:tabIndicatorAnimationMode="elastic"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/type_cuisine"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
