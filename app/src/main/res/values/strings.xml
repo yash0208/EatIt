@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EatIt</string>
+    <string name="app_name">Foodopedia</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="api_key">3eb3a2358c884a3ab7a26d748fd560bb</string>

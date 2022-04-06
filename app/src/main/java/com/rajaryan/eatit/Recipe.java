@@ -230,10 +230,6 @@ public class Recipe extends AppCompatActivity {
                         ing holidays = new ing(name, id,amount,unit);
                         viewItems.add(holidays);
                     }
-
-
-
-
                     name1=songObject.getString("title");
                     src1=songObject.getString("sourceName").toString();
                     time1=String.valueOf(songObject.getString("readyInMinutes"));
@@ -291,6 +287,10 @@ public class Recipe extends AppCompatActivity {
 
 
 
+    }
+
+    public void back(View view) {
+        onBackPressed();
     }
 
     public class RecyclerAdapter2 extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
