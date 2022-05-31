@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/nunito_bold"
-            android:text="Eat-It"
+            android:text="Foodopedia"
             android:textColor="#ffffff"
             android:textSize="30dp" />
     </LinearLayout>

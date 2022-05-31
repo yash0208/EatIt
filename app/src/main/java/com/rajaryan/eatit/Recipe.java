@@ -293,6 +293,23 @@ public class Recipe extends AppCompatActivity {
         onBackPressed();
     }
 
+    public void time(View view) {
+        Toast.makeText(Recipe.this,"Average Time To Prepare This Cuisine",Toast.LENGTH_SHORT).show();
+    }
+    public void money(View view) {
+        Toast.makeText(Recipe.this,"Average Cost To Prepare This Cuisine",Toast.LENGTH_SHORT).show();
+    }
+    public void health(View view) {
+        Toast.makeText(Recipe.this,"Health Points Out Of 100",Toast.LENGTH_SHORT).show();
+    }
+
+    public void share(View view) {
+        Intent i=new Intent(getApplicationContext(),image.class);
+        i.putExtra("id",id);
+        i.putExtra("name",name.getText().toString());
+        startActivity(i);
+    }
+
     public class RecyclerAdapter2 extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         private static final int TYPE = 1;

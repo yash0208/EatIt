@@ -111,9 +111,17 @@
                     android:layout_width="60dp"
                     android:background="@drawable/back_button"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_gravity="right"
+                        android:layout_margin="5dp"
+                        android:onClick="time"
+                        android:background="@drawable/information"
+                        android:layout_height="10dp"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:padding="5dp"
+                        android:layout_marginTop="12dp"
                         android:orientation="vertical"
                         android:layout_height="wrap_content">
                         <ImageView
@@ -138,9 +146,17 @@
                     android:background="@drawable/back_button"
                     android:layout_marginLeft="30dp"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_gravity="right"
+                        android:layout_margin="5dp"
+                        android:onClick="health"
+                        android:background="@drawable/information"
+                        android:layout_height="10dp"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:padding="5dp"
+                        android:layout_marginTop="12dp"
                         android:orientation="vertical"
                         android:layout_height="wrap_content">
                         <ImageView
@@ -165,9 +181,17 @@
                     android:layout_marginLeft="30dp"
                     android:background="@drawable/back_button"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_gravity="right"
+                        android:onClick="money"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/information"
+                        android:layout_height="10dp"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:padding="5dp"
+                        android:layout_marginTop="12dp"
                         android:orientation="vertical"
                         android:layout_height="wrap_content">
                         <ImageView
@@ -432,23 +456,47 @@
 
 
             </LinearLayout>
-
-            <Button
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:text="Detailed Review"
-                android:textColor="#ffffff"
+                android:layout_marginBottom="50dp"
+                android:orientation="horizontal"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/nunito_bold"
-                android:background="@drawable/button"
-                android:paddingLeft="10dp"
-                android:layout_gravity="bottom|right"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="30dp"
-                android:paddingRight="10dp"
-                android:id="@+id/open"
-                android:drawableRight="@drawable/ic_baseline_menu_book_24"
-                android:drawablePadding="10dp"
-                android:layout_height="40dp"/>
+                android:layout_gravity="right"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:text="Detailed Review"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:background="@drawable/button"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="10dp"
+
+                    android:paddingRight="10dp"
+                    android:id="@+id/open"
+                    android:drawableRight="@drawable/ic_baseline_menu_book_24"
+                    android:drawablePadding="10dp"
+                    android:layout_height="40dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:text="Share"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:background="@drawable/button"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="10dp"
+                    android:onClick="share"
+                    android:paddingRight="10dp"
+                    android:id="@+id/share"
+                    android:drawableRight="@drawable/ic_baseline_share_24"
+                    android:drawablePadding="10dp"
+                    android:layout_height="40dp"/>
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>

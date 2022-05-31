@@ -69,6 +69,7 @@ public class Search extends Fragment {
     RecyclerView type_cuisine;
     EditText search;
     Button open;
+    Adapter2 adapter22;
     TextView artical;
     ImageView image;
     List<RecipeData> items;
@@ -318,6 +319,7 @@ public class Search extends Fragment {
                 adapter2=new Adapter(option);
                 search_rec.setAdapter(adapter2);
                 adapter2.startListening();
+
             }
         });
         OkHttpClient client = new OkHttpClient();
@@ -372,6 +374,17 @@ public class Search extends Fragment {
         adapter2=new Adapter(option1);
         search_rec.setAdapter(adapter2);
         adapter2.startListening();
+        RecyclerView trivia=v.findViewById(R.id.trivia);
+        trivia.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        Query query2= FirebaseDatabase.getInstance().getReference().child("Food Facts");
+        FirebaseRecyclerOptions<RecipeData> option2 =
+                new FirebaseRecyclerOptions.Builder<RecipeData>()
+                        .setQuery(query2,RecipeData.class)
+                        .setLifecycleOwner(getActivity())
+                        .build();
+        adapter22=new Adapter2(option2);
+        trivia.setAdapter(adapter22);
+        adapter22.startListening();
         return v;
     }
 
@@ -381,7 +394,38 @@ public class Search extends Fragment {
         adapter1.startListening();
         adapter2.startListening();
     }
+    public class Adapter2 extends FirebaseRecyclerAdapter<RecipeData, Adapter2.viewholder> {
+        String time1;
+        /**
+         * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
+         * {@link FirebaseRecyclerOptions} for configuration options.
+         *
+         * @param options
+         */
+        public Adapter2(@NonNull FirebaseRecyclerOptions<RecipeData> options) {
+            super(options);
+        }
 
+        @Override
+        protected void onBindViewHolder(@NonNull viewholder viewholder, int i, @NonNull RecipeData recipeData) {
+            viewholder.tittle.setText(recipeData.getTitle());
+        }
+        @NonNull
+        @Override
+        public viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.fact, parent, false);
+            return new viewholder(view);
+        }
+
+        public class viewholder extends RecyclerView.ViewHolder {
+            TextView tittle;
+            public viewholder(@NonNull View itemView) {
+                super(itemView);
+                tittle = itemView.findViewById(R.id.title);
+            }
+        }
+    }
     public class Adapter extends FirebaseRecyclerAdapter<RecipeData, Adapter.viewholder> {
         String time1;
         /**

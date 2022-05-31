@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#0C1015"
+    android:layout_height="match_parent"
+    tools:context=".Restorent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="00dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Wish Your Cuisine"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff"
+                    android:textSize="30dp" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/search"
+                    android:background="@drawable/search"
+                    android:padding="10dp"
+                    android:drawablePadding="10dp"
+                    android:textColorHint="#52555B"
+                    android:hint="Search Here"
+                    android:layout_marginRight="80dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_height="50dp"/>
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:id="@+id/search_buttom"
+                    android:background="@drawable/search"
+                    android:src="@drawable/ic_baseline_search_24"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="50dp"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/frame1"
+                android:layout_height="500dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/coffee_shop_bro"
+                        android:layout_height="200dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:layout_marginLeft="50dp"
+                        android:textSize="20dp"
+                        android:layout_marginRight="50dp"
+                        android:text="Search your wish and we will show you all the famous restaurant items for that food."
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </FrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/rec"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

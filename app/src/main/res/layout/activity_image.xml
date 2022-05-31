@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#101218"
+    android:layout_height="match_parent"
+    tools:context=".image">
+    <ImageButton
+        android:layout_width="40dp"
+        android:onClick="back"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/back_button"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_gravity="left"
+        android:layout_height="40dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/name"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="00dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Get Your Cuisine"
+        android:layout_marginTop="10dp"
+
+        android:layout_marginLeft="60dp"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:id="@+id/image"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:foregroundGravity="bottom">
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="50dp"
+            android:textSize="18dp"
+            android:maxLines="3"
+            android:text="Share This Recipe With Your Friend"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/search"
+            android:fontFamily="@font/nunito_semibold"
+            android:hint="Type Here"
+            android:textColorHint="#888888"
+            android:padding="10dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/paper_plane" />
+    </FrameLayout>
+</FrameLayout>

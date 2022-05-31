@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="#242831"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="105dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_height="105dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/image"
+                        android:layout_height="match_parent"/>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="#ffffff"
+                        android:id="@+id/tittle"
+                        android:drawableLeft="@drawable/ic_baseline_fastfood_24"
+                        android:drawablePadding="5dp"
+                        android:text="Burger"
+                        android:textSize="20dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textSize="16dp"
+                        android:text="Burger King"
+                        android:id="@+id/time"
+                        android:textColor="#ffffff"
+                        android:drawableLeft="@drawable/ic_baseline_food_bank_24"
+                        android:gravity="center"
+                        android:drawablePadding="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:text="Check Out"
+                        android:textColor="#ffffff"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:background="@drawable/button"
+                        android:paddingLeft="10dp"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginRight="10dp"
+
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/next"
+                        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+                        android:drawablePadding="10dp"
+                        android:layout_height="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

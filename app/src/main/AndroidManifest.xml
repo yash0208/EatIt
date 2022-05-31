@@ -6,10 +6,16 @@
         android:allowBackup="true"
         android:icon="@drawable/logo22"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
         android:roundIcon="@drawable/logo22"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EatIt">
+        android:theme="@style/Theme.EatIt"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Prefrence"
+            android:exported="false" />
+        <activity
+            android:name=".image"
+            android:exported="false" />
         <activity
             android:name=".Recipe"
             android:exported="true" />

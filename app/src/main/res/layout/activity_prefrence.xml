@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#101218"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Prefrence">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="50dp"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp">
+                <TextView
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textSize="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:text="My Profile"
+                    android:id="@+id/namse"
+                    android:layout_marginRight="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/circle_back"
+                    android:src="@drawable/chef_bro_1"
+                    android:layout_height="150dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="170dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textSize="22dp"
+                        android:gravity="left"
+                        android:text="Yash Mehta"
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#d7d9d9"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textSize="18dp"
+                        android:gravity="left"
+                        android:text="developer.0208@gmail.com"
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Create Your Profile"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Your Age : "
+                    android:layout_height="wrap_content"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner1"
+                    style="@style/mySpinnerItemStyle"
+                    android:layout_gravity="right"
+                    android:foregroundGravity="right"
+                    android:textColorHint="#ffffff"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="left|center_vertical"
+                    android:background="@drawable/back2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Country : "
+                    android:layout_height="wrap_content"/>
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="match_parent"
+                    app:ccp_arrowColor="#ffffff"
+                    app:ccp_contentColor="#ffffff"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/back2"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Gender : "
+                    android:layout_height="wrap_content"/>
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/radioGroup">
+
+                    <RadioButton
+                        android:id="@+id/radio_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textSize="18dp"
+                        android:onClick="checkButton"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textSize="18dp"
+                        android:onClick="checkButton"/>
+
+                </RadioGroup>
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="120dp"
+                    android:background="@drawable/eating_disorder_pana"
+                    android:layout_height="120dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Health Profile "
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#888888"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="150dp"
+                    android:text="Enter valid values to create health profile according to which meal planner will work. "
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Calorie : "
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:layout_width="120dp"
+                    android:background="@drawable/back2"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:hint="Min"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:textColorHint="#888888"
+                    android:paddingLeft="10dp"
+                    android:layout_marginLeft="22dp"
+                    android:paddingRight="10dp"
+                    android:layout_height="50dp"/>
+                <EditText
+                    android:layout_width="120dp"
+                    android:background="@drawable/back2"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:hint="Max"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="16dp"
+                    android:textColorHint="#888888"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_height="50dp"/>
+            </LinearLayout>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:paddingRight="20dp"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/male_table"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#ffffff"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content">
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="Male Calorie Requirement"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="Age"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="Life Style"
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="Sedentary"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="Moderate"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="Active"
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="4-8"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="1400"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1400-1600"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1600-2000  "
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="9-13"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="1800"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1800-2200"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2000-2600  "
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="14-18"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="2200"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2400-2800"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2800-3200  "
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="19-30"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="2400"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2600-2800"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="3000  "
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="31-50"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="2200"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2400-2600"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2800-3000  "
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="51+"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="2000"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2200-2400"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2400-2800  "
+                            android:textColor="#ffffff" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/female_table"
+                    android:paddingRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#ffffff"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="Female Calorie Requirement"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="Age"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="Life Style"
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="Sedentary"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="Moderate"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="Active"
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="4-8"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="1200"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1400-1600"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1400-1800"
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="9-13"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="1600"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1600-2000"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1800-2200"
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="14-18"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="1800"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2000"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2400"
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="19-30"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="2000"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2000-2200"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2400"
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="31-50"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="1800"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2000"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2200"
+                            android:textColor="#ffffff" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="51+"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_column="0" />
+                        <TextView
+                            android:text="1600 "
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1800"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2000-2200"
+                            android:textColor="#ffffff" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Diabetes : "
+                    android:layout_height="wrap_content"/>
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/radioGroup2">
+
+                    <RadioButton
+                        android:id="@+id/radio_one1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textSize="18dp"
+                        android:onClick="checkButton"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_two1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textSize="18dp"
+                        android:onClick="checkButton"/>
+
+                </RadioGroup>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="18dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_vertical"
+                android:text="Sugar Requirement Chart : "
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/_60_f_60533296_sxockwmu0xfctpp24tpjc2tulrj37yap"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Suger Requierment : "
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/suger"
+                    style="@style/mySpinnerItemStyle"
+                     android:layout_gravity="right"
+                    android:foregroundGravity="right"
+                    android:textColorHint="#888888"
+                    android:layout_marginLeft="5dp"
+                    android:hint="Eg. 80 mg"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="10dp"
+                    android:gravity="left|center_vertical"
+                    android:background="@drawable/back2"/>
+            </LinearLayout>
+            <Button
+                android:layout_width="200dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_baseline_home_24"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Home"
+                android:background="@drawable/back3"
+                android:layout_gravity="left"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

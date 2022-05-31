@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         user = mAuth.getCurrentUser();
     }
     private void login() {
-        Intent i=new Intent(MainActivity.this,Login.class);
+        Intent i=new Intent(MainActivity.this,Prefrence.class);
         startActivity(i);
     }
     @Override
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 FirebaseUser user = mAuth.getCurrentUser();
                 if(user!=null){
-                    Intent o=new Intent(MainActivity.this,HomeActivity.class);
+                    Intent o=new Intent(MainActivity.this,Prefrence.class);
                     startActivity(o);
                 }
                 login();

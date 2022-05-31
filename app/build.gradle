@@ -45,6 +45,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
     implementation 'com.firebaseui:firebase-ui-auth:4.3.2'
 
+    implementation 'com.hbb20:ccp:2.4.7'
+
     //Ui
     implementation 'com.google.android.material:material:<version>'
 

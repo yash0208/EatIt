@@ -17,7 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/menu"
-        android:background="@color/colorPrimary"
+        app:itemRippleColor="#D07843"
+        android:background="@drawable/menu_backiground"
         app:itemIconTint="@android:color/white"
-        app:itemTextColor="@android:color/white"/>
+        app:itemTextColor="#D07843"/>
 </FrameLayout>

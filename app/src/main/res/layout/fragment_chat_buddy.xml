@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#0C1015"
+    android:layout_height="match_parent"
+    tools:context=".ChatBuddy">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="00dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Chat with appEtite buddy"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:id="@+id/rec"
+        android:layout_marginTop="55dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"/>
+    <FrameLayout
+        android:id="@+id/message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="60dp"
+        android:foregroundGravity="bottom">
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="50dp"
+            android:maxLines="3"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/search"
+            android:fontFamily="@font/nunito_semibold"
+            android:hint="Type Here"
+            android:textColorHint="#888888"
+            android:padding="10dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/paper_plane" />
+    </FrameLayout>
+
+</FrameLayout>

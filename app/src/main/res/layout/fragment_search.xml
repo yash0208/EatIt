@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="10dp"
                     android:id="@+id/search"
                     android:background="@drawable/search"
                     android:padding="10dp"
@@ -61,6 +61,19 @@
                 android:layout_marginLeft="10dp"
                 android:id="@+id/rec_search"
                 android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Food Trivia"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:id="@+id/trivia"
+                android:layout_height="wrap_content"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:textColor="#ffffff"
@@ -143,6 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginBottom="50dp"
                 android:id="@+id/type_cuisine"
                 android:layout_height="match_parent"/>
         </LinearLayout>

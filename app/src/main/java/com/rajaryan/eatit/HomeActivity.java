@@ -42,13 +42,16 @@ public class HomeActivity extends AppCompatActivity {
                     selectedFragment = new Search();
                     break;
                 case R.id.page_2:
-                    selectedFragment = new Video();
+                    selectedFragment = new Restorent();
                     break;
                 case R.id.page_3:
                     selectedFragment = new Nutrination();
                     break;
                 case R.id.page_4:
                     selectedFragment = new Profile();
+                    break;
+                case R.id.page_5:
+                    selectedFragment = new ChatBuddy();
                     break;
             }
             // It will help to replace the
