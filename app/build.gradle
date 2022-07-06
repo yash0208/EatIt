@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.rajaryan.eatit"
@@ -26,6 +26,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -36,6 +39,8 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
     implementation 'com.google.firebase:firebase-database:20.0.1'
+    implementation 'androidx.navigation:navigation-fragment:2.5.0'
+    implementation 'androidx.navigation:navigation-ui:2.5.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -69,4 +74,7 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.14.2'
 
     //Chart
+
+    //calender
+    implementation 'com.github.gastricspark:scrolldatepicker:0.0.1'
 }

@@ -231,6 +231,7 @@
                     android:layout_gravity="center_vertical"
                     android:gravity="center"
                     android:hint="Min"
+                    android:id="@+id/mc"
                     android:fontFamily="@font/nunito_semibold"
                     android:textColor="#ffffff"
                     android:textSize="16dp"
@@ -245,6 +246,7 @@
                     android:layout_gravity="center_vertical"
                     android:gravity="center"
                     android:hint="Max"
+                    android:id="@+id/maxc"
                     android:fontFamily="@font/nunito_semibold"
                     android:textColor="#ffffff"
                     android:layout_marginLeft="30dp"
@@ -881,7 +883,7 @@
                         android:textColor="#ffffff"
                         android:fontFamily="@font/nunito_semibold"
                         android:textSize="18dp"
-                        android:onClick="checkButton"
+                        android:onClick="checkButton2"
                         android:checked="true"/>
 
                     <RadioButton
@@ -893,7 +895,7 @@
                         android:layout_marginLeft="10dp"
                         android:fontFamily="@font/nunito_semibold"
                         android:textSize="18dp"
-                        android:onClick="checkButton"/>
+                        android:onClick="checkButton2"/>
 
                 </RadioGroup>
             </LinearLayout>
@@ -952,6 +954,7 @@
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/nunito_semibold"
                 android:text="Home"
+                android:id="@+id/submit"
                 android:background="@drawable/back3"
                 android:layout_gravity="left"/>
         </LinearLayout>

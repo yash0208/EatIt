@@ -37,6 +37,7 @@ import org.jsoup.Jsoup;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import okhttp3.Call;
@@ -308,6 +309,17 @@ public class Recipe extends AppCompatActivity {
         i.putExtra("id",id);
         i.putExtra("name",name.getText().toString());
         startActivity(i);
+    }
+
+    public void add(View view) {
+        HashMap<String,String> hashMap=new HashMap<>();
+        hashMap.put("id",id);
+        hashMap.put("name",name.getText().toString());
+        hashMap.put("img",link);
+        hashMap.put("hotel",src1);
+        DatabaseReference databaseReference=FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("WishList");
+        databaseReference.push().setValue(hashMap);
+        Toast.makeText(getApplicationContext(),"Added",Toast.LENGTH_SHORT).show();
     }
 
     public class RecyclerAdapter2 extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

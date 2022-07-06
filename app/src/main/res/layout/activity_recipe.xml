@@ -462,14 +462,15 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="right"
+                android:layout_marginRight="20dp"
                 android:layout_height="wrap_content">
                 <Button
                     android:layout_width="wrap_content"
-                    android:text="Detailed Review"
+                    android:text="Review"
                     android:textColor="#ffffff"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/nunito_bold"
-                    android:background="@drawable/button"
+                    android:background="@drawable/back_button"
                     android:paddingLeft="10dp"
                     android:layout_gravity="bottom|right"
                     android:layout_marginRight="10dp"
@@ -479,22 +480,35 @@
                     android:drawableRight="@drawable/ic_baseline_menu_book_24"
                     android:drawablePadding="10dp"
                     android:layout_height="40dp"/>
-                <Button
+                <ImageButton
                     android:layout_width="wrap_content"
-                    android:text="Share"
+                    android:text="Wishlist"
                     android:textColor="#ffffff"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="00dp"
                     android:fontFamily="@font/nunito_bold"
-                    android:background="@drawable/button"
+                    android:background="@drawable/back_button"
                     android:paddingLeft="10dp"
-                    android:layout_gravity="bottom|right"
                     android:layout_marginRight="10dp"
+                    android:onClick="add"
+                    android:src="@drawable/ic_baseline_add_shopping_cart_24"
+                    android:paddingRight="10dp"
+                    android:id="@+id/add"
+                    android:drawableRight="@drawable/ic_baseline_add_shopping_cart_24"
+                    android:layout_height="40dp"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:textColor="#ffffff"
+                    android:fontFamily="@font/nunito_bold"
+                    android:background="@drawable/back_button"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/ic_baseline_share_24"
                     android:onClick="share"
                     android:paddingRight="10dp"
                     android:id="@+id/share"
                     android:drawableRight="@drawable/ic_baseline_share_24"
                     android:drawablePadding="10dp"
                     android:layout_height="40dp"/>
+
             </LinearLayout>
 
         </LinearLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="#101218"
+    android:layout_marginBottom="50dp"
+    tools:context=".Planner">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp">
+                <TextView
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textSize="30dp"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="Your Profile"
+                    android:id="@+id/namse"
+                    android:layout_marginRight="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/exit"
+                    android:visibility="visible"
+                    android:background="@drawable/back_button"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_baseline_exit_to_app_24"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_height="40dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="200dp">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/circle_back"
+                    android:src="@drawable/chef_bro_1"
+                    android:layout_height="150dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="170dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textSize="22dp"
+                        android:gravity="left"
+                        android:text="Yash Mehta"
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#d7d9d9"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textSize="18dp"
+                        android:gravity="left"
+                        android:text="developer.0208@gmail.com"
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </FrameLayout>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Routine Intake"
+                android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"
+                android:drawablePadding="10dp"
+                android:textColor="#D07843"
+                android:textSize="20dp" />
+            <com.harrywhewell.scrolldatepicker.MonthScrollDatePicker
+                android:id="@+id/month_date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:baseColor="@color/colorPrimary"
+                app:baseTextColor="@color/default_base_text"
+                app:selectedColor="@color/colorAccent"
+                app:selectedTextColor="@color/default_selected_text"
+                app:showTitle="true"
+                app:showFullDate="false"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selected"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:text="Snacks" />
+
+                    <Button
+                        android:id="@+id/noon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/not_selected"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:text="Lunch" />
+
+                    <Button
+                        android:id="@+id/evening"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/not_selected"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:text="Supper" />
+
+                    <Button
+                        android:id="@+id/night"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/not_selected"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:textSize="16dp"
+                        android:paddingLeft="10dp"
+                        android:text="Dinner" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Wishlist"
+                android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"
+                android:drawablePadding="10dp"
+
+                android:textColor="#D07843"
+                android:textSize="20dp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/rec"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

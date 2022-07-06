@@ -51,8 +51,9 @@ public class HomeActivity extends AppCompatActivity {
                     selectedFragment = new Profile();
                     break;
                 case R.id.page_5:
-                    selectedFragment = new ChatBuddy();
+                    selectedFragment = new Planner();
                     break;
+
             }
             // It will help to replace the
             // one fragment to other.

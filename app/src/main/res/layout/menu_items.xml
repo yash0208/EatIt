@@ -55,23 +55,38 @@
                         android:drawablePadding="5dp"
                         android:layout_marginTop="5dp"
                         android:layout_height="wrap_content"/>
-                    <Button
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:text="Check Out"
-                        android:textColor="#ffffff"
-                        android:textSize="14dp"
-                        android:fontFamily="@font/nunito_bold"
-                        android:background="@drawable/button"
-                        android:paddingLeft="10dp"
-                        android:layout_gravity="bottom|right"
-                        android:layout_marginRight="10dp"
-
-                        android:paddingRight="10dp"
+                        android:orientation="horizontal"
                         android:layout_marginTop="10dp"
-                        android:id="@+id/next"
-                        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
-                        android:drawablePadding="10dp"
-                        android:layout_height="40dp"/>
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content">
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:id="@+id/delete"
+                            android:visibility="gone"
+                            android:background="@drawable/button"
+                            android:src="@drawable/ic_baseline_delete_outline_24"
+                            android:layout_marginRight="7dp"
+                            android:layout_height="40dp"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:text="Check Out"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:background="@drawable/button"
+                            android:paddingLeft="10dp"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginRight="10dp"
+
+                            android:paddingRight="10dp"
+                            android:id="@+id/next"
+                            android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+                            android:drawablePadding="10dp"
+                            android:layout_height="40dp"/>
+                    </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
 

@@ -65,6 +65,7 @@ public class Search extends Fragment {
     private String mParam2;
     RecyclerView search_rec;
     String JSON_URL;
+    ImageButton vp,vo;
     Adapter adapter1,adapter2;
     RecyclerView type_cuisine;
     EditText search;
@@ -385,6 +386,23 @@ public class Search extends Fragment {
         adapter22=new Adapter2(option2);
         trivia.setAdapter(adapter22);
         adapter22.startListening();
+        vp=v.findViewById(R.id.vp);
+        vp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getActivity(),VdieoActivity.class);
+                startActivity(i);
+            }
+        });
+        vo=v.findViewById(R.id.vo);
+        vo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getActivity(),ChatWMe.class);
+                startActivity(i);
+            }
+        });
+
         return v;
     }
 

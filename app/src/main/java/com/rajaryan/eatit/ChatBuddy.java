@@ -107,38 +107,38 @@ public class ChatBuddy extends Fragment {
             @Override
             public void onClick(View view) {
 
-                    OkHttpClient client = new OkHttpClient();
-                    String status="s";
-                    okhttp3.Request request = new okhttp3.Request.Builder()
-                            .url("https://api.spoonacular.com/recipes/quickAnswer?apiKey=13eccaaea6a54c3289ff66823a024077&q="+message.getText().toString())
-                            .get()
-                            .build();
-                    client.newCall(request).enqueue(new Callback() {
-                        @Override
-                        public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                OkHttpClient client = new OkHttpClient();
+                String status="s";
+                okhttp3.Request request = new okhttp3.Request.Builder()
+                        .url("https://api.spoonacular.com/recipes/quickAnswer?apiKey=13eccaaea6a54c3289ff66823a024077&q="+message.getText().toString())
+                        .get()
+                        .build();
+                client.newCall(request).enqueue(new Callback() {
+                    @Override
+                    public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    @Override
+                    public void onResponse(@NotNull Call call, @NotNull okhttp3.Response response) throws IOException {
+                        String myresponse = response.body().string();
+
+                        try {
+                            JSONObject json = new JSONObject(myresponse);
+                            String answer=json.getString("answer");
+                            HashMap<String,String> hashMap=new HashMap<>();
+                            hashMap.put("Message",message.getText().toString());
+                            hashMap.put("Reply",answer.toString());
+                            DatabaseReference databaseReference=FirebaseDatabase.getInstance().getReference("Users/"+FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("ChatBot");
+                            databaseReference.push().setValue(hashMap);
+                        } catch (JSONException e) {
                             e.printStackTrace();
                         }
+                        Log.e("res", myresponse);
 
-                        @Override
-                        public void onResponse(@NotNull Call call, @NotNull okhttp3.Response response) throws IOException {
-                            String myresponse = response.body().string();
-
-                            try {
-                                JSONObject json = new JSONObject(myresponse);
-                                String answer=json.getString("answer");
-                                HashMap<String,String> hashMap=new HashMap<>();
-                                hashMap.put("Message",message.getText().toString());
-                                hashMap.put("Reply",answer.toString());
-                                DatabaseReference databaseReference=FirebaseDatabase.getInstance().getReference("Users/"+FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).child("ChatBot");
-                                databaseReference.push().setValue(hashMap);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                            Log.e("res", myresponse);
-
-                        }
-                    });
-                }
+                    }
+                });
+            }
 
         });
         Query query= FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("ChatBot");

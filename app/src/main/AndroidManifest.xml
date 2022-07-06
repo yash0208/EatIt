@@ -11,6 +11,12 @@
         android:theme="@style/Theme.EatIt"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ChatWMe"
+            android:exported="false" />
+        <activity
+            android:name=".VdieoActivity"
+            android:exported="false" />
+        <activity
             android:name=".Prefrence"
             android:exported="false" />
         <activity
